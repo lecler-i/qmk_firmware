@@ -34,8 +34,6 @@ enum combos {
   CV_PASTE,
   XV_PASTE_MATCH,
   ZV_SELECT_ALL,
-  COMMDOT_QUES,
-  MCOMM_EXLM,
 };
 
 // Hands down combos https://sites.google.com/alanreiser.com/handsdown/home#h.aplo097wq6hh
@@ -91,10 +89,24 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
 // Fixes the issue when pressing some of the homekeys fast
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case RALT_T(KC_L):
+        case LGUI_T(KC_A):
             return true;
         case LALT_T(KC_S):
             return true;
+        case LCTL_T(KC_D):
+            return true;
+        case RSFT_T(KC_F):
+            return true;
+
+        case RSFT_T(KC_J):
+            return true;
+        case RCTL_T(KC_K):
+            return true;
+        case RALT_T(KC_L):
+            return true;
+        case RGUI_T(SE_ODIA):
+            return true;
+
         default:
             return false;
     }
