@@ -44,9 +44,6 @@ const uint16_t PROGMEM copy_combo[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM paste_combo[] = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM paste_match_combo[] = {KC_X, KC_V, COMBO_END};
 const uint16_t PROGMEM select_all_combo[] = {KC_Z, KC_V, COMBO_END};
-// Other combos
-const uint16_t PROGMEM question_mark_combo[] = {KC_COMM, KC_DOT, COMBO_END};
-const uint16_t PROGMEM exclamation_mark_combo[] = {KC_M, KC_COMM, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
    [ZC_CUT] = COMBO(cut_combo, LGUI(KC_X)),
@@ -54,8 +51,6 @@ combo_t key_combos[COMBO_COUNT] = {
    [CV_PASTE] = COMBO(paste_combo, LGUI(KC_V)),
    [XV_PASTE_MATCH] = COMBO(paste_match_combo, LGUI(LSA(KC_V))),
    [ZV_SELECT_ALL] = COMBO(select_all_combo, LGUI(KC_A)),
-   [MCOMM_EXLM] = COMBO(exclamation_mark_combo, SE_EXLM),
-   [COMMDOT_QUES] = COMBO(question_mark_combo, SE_QUES)
 };
 
 #define HC_A LGUI_T(KC_A)
@@ -169,11 +164,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_NUM] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      SE_PLUS,    KC_7,    KC_8,    KC_9, SE_ARNG, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX,    KC_7,    KC_8,    KC_9, SE_ARNG, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_LGUI, KC_LALT, KC_LCTRL,KC_RSFT, XXXXXXX,                      SE_SLSH,    KC_4,    KC_5,    KC_6, SE_ADIA, XXXXXXX,
+      XXXXXXX, KC_LGUI, KC_LALT, KC_LCTRL,KC_RSFT, XXXXXXX,                      SE_ACUT,    KC_4,    KC_5,    KC_6, SE_ADIA, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      SE_DQUO,    KC_1,    KC_2,    KC_3, SE_QUOT, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      SE_PLUS,    KC_1,    KC_2,    KC_3, SE_QUOT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX, XXXXXXX, XXXXXXX,    SE_MINS,    KC_0, SE_DOT
                                       //`--------------------------'  `--------------------------'
