@@ -96,10 +96,10 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
         case LCTL_T(KC_D):
             return true;
         case RSFT_T(KC_F):
-            return false;
+            return true;
 
         case RSFT_T(KC_J):
-            return false;
+            return true;
         case RCTL_T(KC_K):
             return true;
         case RALT_T(KC_L):
