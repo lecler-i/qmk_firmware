@@ -114,10 +114,18 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LALT_T(KC_S):
+        case HC_S:
+            // Alt
             return TAPPING_TERM + 150;
-        case RALT_T(KC_L):
+        case HC_L:
+            // Alt
             return TAPPING_TERM + 150;
+        case HC_F:
+            // Shift
+            return TAPPING_TERM - 50;
+        case HC_J:
+            // Shift
+            return TAPPING_TERM - 50;
         default:
             return TAPPING_TERM;
     }
