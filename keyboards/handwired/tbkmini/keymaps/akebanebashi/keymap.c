@@ -60,31 +60,6 @@ combo_t key_combos[COMBO_COUNT] = {
 #define HC_L RALT_T(KC_L)
 #define HC_ODIA RGUI_T(SE_ODIA)
 
-// Fixes the issue when pressing some of the homekeys fast
-bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case HC_A:
-            return true;
-        case HC_S:
-            return true;
-        case HC_D:
-            return true;
-        case HC_F:
-            return true;
-
-        case HC_J:
-            return true;
-        case HC_K:
-            return true;
-        case HC_L:
-            return true;
-        case HC_ODIA:
-            return true;
-
-        default:
-            return false;
-    }
-}
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
